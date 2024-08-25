@@ -3,15 +3,16 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Topbar from '../components/Topbar.astro';
 import { ViewTransitions } from 'astro:transitions';
+import Widget from '../components/Widget.astro';
+
 
 ---
 
 
-<ViewTransitions />
+
 
 <Topbar/>
-
-
+<Widget/>
 
 <Layout title="Welcome to Astro.">
 	<main>
@@ -72,6 +73,7 @@ import { ViewTransitions } from 'astro:transitions';
 		</ul>
 	</main>
 </Layout>
+
 
 <style>
 	main {
