@@ -1,7 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Topbar from '../components/Topbar.astro';
+import { ViewTransitions } from 'astro:transitions';
+
 ---
+
+
+<ViewTransitions />
+
+<Topbar/>
+
+
 
 <Layout title="Welcome to Astro.">
 	<main>
