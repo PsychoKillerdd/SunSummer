@@ -5,7 +5,6 @@ import Topbar from '../components/Topbar.astro';
 import { ViewTransitions } from 'astro:transitions';
 import Widget from '../components/Widget.astro';
 import Navbar from '../components/Navbar.astro';
-import Carusel from '../components/Carusel.astro';
 import Fcobot from '../components/Fcobot.astro';
 
 
@@ -13,9 +12,9 @@ import Fcobot from '../components/Fcobot.astro';
 
 <Layout title="Welcome to Astro.">
 	<Navbar/>
-	<Topbar/>
-	<Widget/>
 	<Fcobot/>
+		<Topbar/>
+	<Widget/>
 </Layout>
 
 
