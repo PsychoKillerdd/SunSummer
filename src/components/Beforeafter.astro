@@ -1,205 +1,195 @@
----
-import '/src/scripts/app.js';
----
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <main>
-        <div class="container">
-          <div class="image-container">
-            <img
-              class="image-before slider-image"
-             src="/45f287c1b6d0c366f0ac8a247592b401.jpg"
-              alt="color photo"
-            />
-            <img
-              class="image-after slider-image"
-              src="/descargar.gif"
-              alt="black and white"
-            />
-          </div>
-          <!-- step="10" -->
-          <input
-            type="range"
-            min="0"
-            max="100"
-            value="50"
-            aria-label="Percentage of before photo shown"
-            class="slider"
-          />
-          <div class="slider-line" aria-hidden="true"></div>
-          <div class="slider-button" aria-hidden="true">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="30"
-              fill="currentColor"
-              viewBox="0 0 256 256"
-            >
-              <rect width="256" height="256" fill="none"></rect>
-              <line
-                x1="128"
-                y1="40"
-                x2="128"
-                y2="216"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="16"
-              ></line>
-              <line
-                x1="96"
-                y1="128"
-                x2="16"
-                y2="128"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="16"
-              ></line>
-              <polyline
-                points="48 160 16 128 48 96"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="16"
-              ></polyline>
-              <line
-                x1="160"
-                y1="128"
-                x2="240"
-                y2="128"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="16"
-              ></line>
-              <polyline
-                points="208 96 240 128 208 160"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="16"
-              ></polyline>
-            </svg>
-          </div>
-        </div>
-      <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/dzqDU9efnnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<main>
+  <div class="container">
+    <div class="image-container">
+      <img
+        class="image-before slider-image"
+        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+        alt="color photo"
+      />
+      <img
+        class="image-after slider-image"
+        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+        alt="black and white"
+      />
     </div>
-      </main>
-</body>
-</html>l
+    <input
+      type="range"
+      min="0"
+      max="100"
+      value="50"
+      aria-label="Percentage of before photo shown"
+      class="slider"
+    />
+    <div class="slider-line" aria-hidden="true"></div>
+    <div class="slider-button" aria-hidden="true">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        fill="currentColor"
+        viewBox="0 0 256 256"
+      >
+        <rect width="256" height="256" fill="none"></rect>
+        <line
+          x1="128"
+          y1="40"
+          x2="128"
+          y2="216"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="12"
+        ></line>
+        <line
+          x1="96"
+          y1="128"
+          x2="16"
+          y2="128"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="12"
+        ></line>
+        <polyline
+          points="48 160 16 128 48 96"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="12"
+        ></polyline>
+        <line
+          x1="160"
+          y1="128"
+          x2="240"
+          y2="128"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="12"
+        ></line>
+        <polyline
+          points="208 96 240 128 208 160"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="12"
+        ></polyline>
+      </svg>
+    </div>
+  </div>
+</main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.container');
+    const slider = document.querySelector('.slider');
+    
+    if (container && slider) {
+      slider.addEventListener('input', (e) => {
+        if (e.target instanceof HTMLInputElement) {
+          container.style.setProperty('--position', `${e.target.value}%`);
+        }
+      });
+    }
+  });
+</script>
+
 <style>
-    *,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-iframe {
-  aspect-ratio: 16/9;
-}
+  img {
+    display: block;
+    max-width: 100%;
+  }
 
-.video-container {
-  margin: 2rem;
-  max-height: 300px;
-}
+  main {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+  }
 
-img {
-  display: block;
-  max-width: 100%;
-}
+  .container {
+    display: grid;
+    place-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    --position: 50%;
+    width: 90vw;
+    max-width: 600px;
+    height: 50vh;
+    max-height: 400px;
+  }
 
-main {
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
-}
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
 
-.container {
-  display: grid;
-  place-content: center;
-  position: relative;
-  overflow: hidden;
-  border-radius: 1rem;
-  --position: 50%;
-}
+  .slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+  }
 
-.image-container {
-  max-width: 800px;
-  max-height: 90vh;
-  aspect-ratio: 1/1;
-}
+  .image-before {
+    position: absolute;
+    inset: 0;
+    width: var(--position);
+    filter: grayscale(100%);
+    transition: width 0.3s ease;
+  }
 
-.slider-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: left;
-}
+  .slider {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+  }
 
-.image-before {
-  position: absolute;
-  inset: 0;
-  width: var(--position);
-  filter: grayscale(100%)
-}
+  .slider:focus-visible ~ .slider-button {
+    outline: 3px solid black;
+    outline-offset: 2px;
+  }
 
-.slider {
-  position: absolute;
-  inset: 0;
-  cursor: pointer;
-  opacity: 0;
-  /* for Firefox */
-  width: 100%;
-  height: 100%;
-}
+  .slider-line {
+    position: absolute;
+    inset: 0;
+    width: 0.1rem;
+    height: 100%;
+    background-color: #fff;
+    left: var(--position);
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
 
-.slider:focus-visible ~ .slider-button {
-  outline: 5px solid black;
-  outline-offset: 3px;
-}
-
-.slider-line {
-  position: absolute;
-  inset: 0;
-  width: .2rem;
-  height: 100%;
-  background-color: #fff;
-  /* z-index: 10; */
-  left: var(--position);
-  transform: translateX(-50%);
-  pointer-events: none;
-}
-
-.slider-button {
-  position: absolute;
-  background-color: #fff;
-  color: black;
-  padding: .5rem;
-  border-radius: 100vw;
-  display: grid;
-  place-items: center;
-  top: 50%;
-  left: var(--position);
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  /* z-index: 100; */
-  box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
-}
+  .slider-button {
+    position: absolute;
+    background-color: #fff;
+    color: black;
+    padding: 0.3rem;
+    border-radius: 100vw;
+    display: grid;
+    place-items: center;
+    top: 50%;
+    left: var(--position);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  }
 </style>
