@@ -83,22 +83,6 @@
     </div>
   </div>
 </main>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const container = document.querySelector('.container');
-    const slider = document.querySelector('.slider');
-    
-    if (container && slider) {
-      slider.addEventListener('input', (e) => {
-        if (e.target instanceof HTMLInputElement) {
-          container.style.setProperty('--position', `${e.target.value}%`);
-        }
-      });
-    }
-  });
-</script>
-
 <style>
   *,
   *::after,
@@ -193,3 +177,21 @@
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.container');
+    const slider = document.querySelector('.slider');
+    
+    if (container && slider) {
+      slider.addEventListener('input', (e) => {
+        if (e.target instanceof HTMLInputElement) {
+                // @ts-ignore
+
+          container.style.setProperty('--position', `${e.target.value}%`);
+        }
+      });
+    }
+  });
+</script>
+
