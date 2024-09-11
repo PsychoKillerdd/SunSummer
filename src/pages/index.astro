@@ -5,19 +5,23 @@ import Topbar from '../components/Topbar.astro';
 import { ViewTransitions } from 'astro:transitions';
 import Widget from '../components/Widget.astro';
 import Navbar from '../components/Navbar.astro';
-import Fcobot from '../components/Carusel.astro';
+import Fcobot from '../components/Slides.astro';
 import Beforeafter from '../components/Beforeafter.astro';
-import Inicio from '../components/Inicio.astro';
+import Inicio from '../components/GridServicios.astro';
+import GridServicios from '../components/GridServicios.astro';
+import MiniCarusel from '../components/MiniCarusel.astro';
+import Slides from '../components/Slides.astro';
 
 
 ---
 
 <Layout title="Welcome to Astro.">
 	<Navbar/>
-	<Fcobot/>
-		<Topbar/>
+	<Slides/>
+	<Topbar/>
 	
 	<Widget/>
+	
 	<div class="flex justify-center my-2">
 		
 		<div class="flex w-full items-center justify-center">
@@ -30,14 +34,10 @@ import Inicio from '../components/Inicio.astro';
 			</h1>
 		</div>	
 	</div>	
-		<div class="mx-auto">
-			<Beforeafter/>
-		</div>
-		<Inicio/>
-		<br>
-		<br>
-		<br>
+	<Beforeafter/>
+	<GridServicios/>	
 </Layout>
+
 
 
 
