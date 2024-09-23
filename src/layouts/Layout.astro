@@ -2,6 +2,7 @@
 import Footer from '../components/Footer.astro';
 import Navbar from '../components/Navbar.astro';
 import  SpeedInsights  from "@vercel/speed-insights/astro"
+import Widget from '../components/Widget.astro';
 
 interface Props {
 	title: string;
@@ -11,8 +12,9 @@ interface Props {
 ---
 <SpeedInsights />
 <!doctype html>
-<html lang="en">
-	
+<html lang="es">
+	<Widget/>
+
 	<head>
 
 		<meta charset="UTF-8" />
