@@ -3,6 +3,7 @@ import Footer from '../components/Footer.astro';
 import Navbar from '../components/Navbar.astro';
 import  SpeedInsights  from "@vercel/speed-insights/astro"
 import Widget from '../components/Widget.astro';
+import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
 	title: string;
@@ -10,6 +11,7 @@ interface Props {
 
 
 ---
+<ViewTransitions>
 <SpeedInsights />
 <!doctype html>
 <html lang="es">
