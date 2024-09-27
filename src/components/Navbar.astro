@@ -1,41 +1,42 @@
-<!-- component -->
-<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"is:inline></script>
-<div class="z-2">
-  <div class="antialiased bg-gray-100 dark-mode:bg-gray-900">
-    <div class="w-full text-white bg-[#13151a] dark-mode:text-gray-200 dark-mode:bg-gray-800">
-      <div x-data="{ open: false }" class="z-0 flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+<div class="navbar z-2" style="height: 60px; position: fixed; top: 0; left: 0; right: 0; z-index: 1000;">
+  <div class="antialiased bg-gray-100 dark:bg-gray-900">
+    <div class="w-full text-white bg-[#13151a] dark:text-gray-200 dark:bg-gray-800">
+      <div class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
         <div class="flex flex-row items-center justify-between p-4">
-          <a href="/" class="flex text-lg font-semibold tracking-widest text-white uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"><img class="size-[35%] max-[572px]:size-[30%]" src="/Logonavbar.webp" alt="">Sun Summer </a>
-          <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
-            <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-              <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-              <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          <a href="/" class="flex text-lg font-semibold tracking-widest text-white uppercase rounded-lg focus:outline-none focus:shadow-outline">
+            <img class="w-[35%] max-[572px]:w-[30%]" src="/Logonavbar.webp" alt="">Sun Summer
+          </a>
+          <button id="nav-toggle" class="rounded-lg md:hidden focus:outline-none focus:shadow-outline">
+            <svg id="menu-icon" fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+              <path id="menu-open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+              <path id="menu-close" class="hidden" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
             </svg>
           </button>
         </div>
-        <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="piscinas">Piscinas</a>
-          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="spa">Spa</a>
-          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="nosotros">Nosotros</a>
-          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="contactanos">Contactanos</a>
+        <nav id="nav-menu" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="piscinas">Piscinas</a>
+          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="spa">Spa</a>
+          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="nosotros">Nosotros</a>
+          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="contactanos">Contactanos</a>
           
-          <div @click.away="open = false" class="relative" x-data="{ open: false }">
-            <button @click="open = !open" class="flex flex-row text-white bg-gray-200 items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+          <div class="relative">
+            <button id="dropdown-toggle" class="flex flex-row items-bottom w-full px-4 py-2 mt-2 text-sm font-semibold text-gray-800 bg-gray-200 rounded-lg hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline md:w-auto md:inline md:mt-0 md:ml-4">
               <span>Servicios</span>
-              <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              <svg id="dropdown-arrow" fill="currentColor" viewBox="0 0 20 20" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+              </svg>
             </button>
 
-            <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full md:max-w-screen-sm md:w-screen mt-2 origin-top-right z-20">
-              <div class="px-2 pt-2 pb-4 bg-white rounded-md shadow-lg dark-mode:bg-gray-700">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">      
-
-                  <a class="flex row items-start rounded-lg bg-transparent p-2 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="construccion">
-                    <div class=" rounded-lg p-3">
-                      <img src="pala3.png" alt="Pala" class="md:h-6 md:w-6 h-4 w-4 object-cover">
+            <div id="dropdown-menu" class="text-gray-800 absolute right-0 hidden w-full mt-2 origin-top-right z-20 md:max-w-screen-sm md:w-screen">
+              <div class="px-2 pt-2 pb-4 bg-white rounded-md shadow-lg">
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                  <a class="flex items-start p-2 bg-transparent rounded-lg hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="construccion">
+                    <div class="p-3">
+                      <img src="pala3.png" alt="Pala" class="w-4 h-4 md:w-6 md:h-6 object-cover">
                     </div>
-                    <div class="ml-3 text-black">
-                      <p class="font-semibold">Construccion</p>
-                      <p class="text-sm">¡Crea tu Piscina!</p>
+                    <div class="ml-3">
+                      <p class="font-semibold text-black">Construccion</p>
+                      <p class="text-sm">Â¡Crea tu Piscina!</p>
                     </div>
                   </a>
                 </div>
@@ -47,3 +48,37 @@
     </div>
   </div>
 </div>
+
+<!-- Contenido de la página -->
+<div class="content" style="margin-top: 60px;">
+  <!-- Aquí va el contenido de tus páginas -->
+</div>
+
+<!-- JavaScript para alternar el menú -->
+<script>
+      document.addEventListener("astro:page-load", () => {
+
+  const navToggle = document.getElementById('nav-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  const menuOpenIcon = document.getElementById('menu-open');
+  const menuCloseIcon = document.getElementById('menu-close');
+  const dropdownToggle = document.getElementById('dropdown-toggle');
+  const dropdownMenu = document.getElementById('dropdown-menu');
+  const dropdownArrow = document.getElementById('dropdown-arrow');
+
+  // Alternar menú de navegación
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('hidden');
+    menuOpenIcon.classList.toggle('hidden');
+    menuCloseIcon.classList.toggle('hidden');
+  });
+
+  // Alternar menú desplegable
+  dropdownToggle.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('hidden');
+    dropdownArrow.classList.toggle('rotate-180');
+  });
+
+});
+</script>
