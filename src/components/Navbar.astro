@@ -59,8 +59,7 @@
 
 <!-- JavaScript para alternar el menú -->
 <script>
-      document.addEventListener("astro:page-load", () => {
-
+document.addEventListener("astro:page-load", () => {
   const navToggle = document.getElementById('nav-toggle');
   const navMenu = document.getElementById('nav-menu');
   const menuIcon = document.getElementById('menu-icon');
@@ -70,18 +69,18 @@
   const dropdownMenu = document.getElementById('dropdown-menu');
   const dropdownArrow = document.getElementById('dropdown-arrow');
 
-  // Alternar menú de navegación
-  navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('hidden');
-    menuOpenIcon.classList.toggle('hidden');
-    menuCloseIcon.classList.toggle('hidden');
-  });
-
-  // Alternar menú desplegable
-  dropdownToggle.addEventListener('click', () => {
-    dropdownMenu.classList.toggle('hidden');
-    dropdownArrow.classList.toggle('rotate-180');
-  });
-
+  if (navToggle && navMenu && menuOpenIcon && menuCloseIcon) {
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+      menuOpenIcon.classList.toggle('hidden');
+      menuCloseIcon.classList.toggle('hidden');
+    });
+  }
+  if (dropdownToggle && dropdownMenu && dropdownArrow) {
+    dropdownToggle.addEventListener('click', () => {
+      dropdownMenu.classList.toggle('hidden');
+      dropdownArrow.classList.toggle('rotate-180');
+    });
+  }
 });
 </script>
