@@ -1,37 +1,28 @@
 ---
-import Footer from '../components/Footer.astro';
-import Navbar from '../components/Navbar.astro';
-import  SpeedInsights  from "@vercel/speed-insights/astro"
-import Widget from '../components/Widget.astro';
-import { ViewTransitions } from 'astro:transitions';
-
-interface Props {
-	title: string;
-}
-
-
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
+import Widget from "../components/Widget.astro";
+import { ViewTransitions } from "astro:transitions";
 ---
-<ViewTransitions>
-<SpeedInsights />
 <!doctype html>
 <html lang="es">
-	<Widget/>
-
-	<head>
-
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="logo.svg"/>	
-		<meta name="generator" content={Astro.generator} />
-		<title>Sun Summer</title>
-	</head>
-	
-	<body>
-	<Navbar/>
-		<slot />
-	</body>
-	<Footer/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Sun Summer</title>
+    <ViewTransitions />
+    <SpeedInsights />
+  </head>
+  <body>
+    <Widget />
+    <Navbar />
+      <slot />
+    <Footer />
+  </body>
 </html>
 
 

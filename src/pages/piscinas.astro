@@ -1,23 +1,24 @@
 ---
 import Gallery from "../components/Gallery.astro";
 import Layout from "../layouts/Layout.astro";
-
-
 ---
 <Layout title="Piscinas">
-    <div class="flex flex-col w-full items-center pt-4 gap-4 bg-gradient-to-b from-blue-600 via-blue-300 to-blue-100">
-        <p class="text-4xl md:text-6xl font-extrabold text-white max-[572px]:text-2xl">Piscinas hechas por nosotros</p>
-        <form action="" class="max-w-[480px] w-full px-4">
-            <div class="relative">
-                <button type="submit">
-                        
-                    </button>
-            </div>
-        </form>
-    </div>
-
-<Gallery/>
+    
 
 
+<section class="max-[572px]:mt-36 mt-32 flex flex-col items-center ">
+    
+    
+        <div class="relative inline-block w-max  mx-auto">
+        <span class="text-2xl md:text-3xl font-bold">
+         <h2>Piscinas Sun Summer</h2>
+        </span>
+        <span class="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-red-500 via-orange-400 to-yellow-600 rounded-full"></span>
+      </div>
 
+      <div class="mx-auto">
+        <Gallery/>
+      </div>
+    
+</section>
 </Layout>
