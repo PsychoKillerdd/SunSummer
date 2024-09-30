@@ -1,0 +1,118 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Widget from '../components/Widget.astro';
+import Topbar from '../components/Topbar.astro';
+---
+
+<Layout title="Mantenimiento y Reparación de Piscinas">  
+    <Topbar/>
+    <Widget/>
+    
+    <!-- Título Principal -->
+    <div class="relative flex flex-col w-full items-center pt-4 pb-4 gap-4 bg-cover bg-center" style="background-image: url('/wix.jpeg');">
+        <div class="absolute inset-0"></div>
+        <h2 class="text-4xl pt-6 md:text-6xl font-extrabold text-white max-[572px]:text-2xl z-10">
+            Mantenimiento y Reparación de Piscinas
+        </h2>
+        <!-- Sección de Descripción -->
+        <p class="text-white text-lg md:text-2xl text-center max-w-3xl z-10">
+            En <span class="font-bold">SunSummer</span>, ofrecemos soluciones integrales de <span class="font-bold">mantenimiento y reparación</span> para que tu piscina siempre luzca impecable y funcione de manera óptima. Desde limpieza profunda hasta reparaciones especializadas.
+        </p>
+        <!-- Botón de Llamada a la Acción -->
+        <a href="/contactanos" class="bg-white text-blue-600 hover:bg-blue-100 font-semibold py-3 px-8 rounded-md shadow-lg transition-all duration-300 z-10">
+            ¡Programa tu Servicio!
+        </a>
+    </div>
+
+    <div class="flex flex-col w-full items-center pt-6 min-h-screen bg-blue-100">
+        <!-- Sección de Beneficios -->
+        <div class="mt-12 w-full max-w-4xl p-4 rounded-lg shadow-md text-gray-800 bg-blue-50">
+            <h3 class="text-3xl font-bold text-center mb-8 text-blue-900">Beneficios de Mantenimiento con SunSummer</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="flex flex-col items-center">
+                    <h4 class="text-2xl font-bold text-blue-800">Limpieza Profesional</h4>
+                    <p class="text-center">Mantén tu piscina libre de impurezas y con el agua cristalina, gracias a nuestros servicios de limpieza exhaustiva.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <h4 class="text-2xl font-bold text-blue-800">Prevención de Daños</h4>
+                    <p class="text-center">Con inspecciones regulares, evitamos problemas mayores y garantizamos el buen estado de tu piscina durante todo el año.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <h4 class="text-2xl font-bold text-blue-800">Reparaciones Especializadas</h4>
+                    <p class="text-center">Ofrecemos soluciones rápidas y efectivas para cualquier tipo de avería, desde filtraciones hasta fallos en los sistemas de filtrado.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <h4 class="text-2xl font-bold text-blue-800">Mantenimiento Preventivo</h4>
+                    <p class="text-center">Nuestros planes de mantenimiento preventivo aseguran que tu piscina esté en perfectas condiciones para disfrutarla en cualquier momento.</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Sección de Servicios con Imágenes -->
+        <div class="mt-12 w-full max-w-4xl p-6 rounded-lg text-gray-800">
+            <h3 class="text-3xl font-bold text-center mb-8 text-blue-900">Nuestros Servicios</h3>
+            <div class="grid grid-cols-1 gap-12">
+                <!-- Servicio 1 -->
+                <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-4 rounded-lg shadow">
+                    <img src="/nino2.jpg" alt="Limpieza y desinfección" class="w-full md:w-1/2 rounded-lg shadow-lg object-cover">
+                    <div class="text-center md:text-left">
+                        <h4 class="text-2xl font-bold text-blue-800">Limpieza y Desinfección</h4>
+                        <p>
+                            Nos encargamos de la limpieza profunda y desinfección de tu piscina, eliminando suciedad, algas y bacterias para garantizar un ambiente seguro y saludable.
+                        </p>
+                    </div>
+                </div>
+                <!-- Servicio 2 -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-8 bg-white p-4 rounded-lg shadow">
+                    <img src="/nino2.jpg" alt="Reparación de fisuras" class="w-full md:w-1/2 rounded-lg shadow-lg object-cover">
+                    <div class="text-center md:text-left">
+                        <h4 class="text-2xl font-bold text-blue-800">Reparación de Fisuras</h4>
+                        <p>
+                            Detectamos y reparamos fisuras en la estructura de la piscina, evitando filtraciones de agua y otros daños que puedan afectar la integridad de tu instalación.
+                        </p>
+                    </div>
+                </div>
+                <!-- Servicio 3 -->
+                <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-4 rounded-lg shadow">
+                    <img src="/nino2.jpg" alt="Sistemas de filtrado y bombeo" class="w-full md:w-1/2 rounded-lg shadow-lg object-cover">
+                    <div class="text-center md:text-left">
+                        <h4 class="text-2xl font-bold text-blue-800">Mantenimiento de Sistemas de Filtrado y Bombeo</h4>
+                        <p>
+                            Nuestro equipo se especializa en el mantenimiento de los sistemas de filtrado y bombeo, asegurando que el agua de tu piscina esté siempre en óptimas condiciones.
+                        </p>
+                    </div>
+                </div>
+                <!-- Servicio 4 -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-8 bg-white p-4 rounded-lg shadow">
+                    <img src="/nino2.jpg" alt="Reemplazo de azulejos" class="w-full md:w-1/2 rounded-lg shadow-lg object-cover">
+                    <div class="text-center md:text-left">
+                        <h4 class="text-2xl font-bold text-blue-800">Reemplazo de Azulejos</h4>
+                        <p>
+                            Reparamos o reemplazamos azulejos dañados o sueltos para mantener la estética y seguridad de tu piscina en perfecto estado.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sección de Videos -->
+        <div class="mt-12 w-full max-w-4xl p-6 rounded-lg">
+            <h3 class="text-3xl font-bold text-center mb-8 text-blue-900">Videos del mantenimiento</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Video 1 -->
+                <iframe class="w-full h-full aspect-video" src="https://www.youtube.com/embed/k7VcUe-uZhc?si=VtQauVGci9-BANCx?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- Video 2 -->
+                <iframe class="w-full h-full aspect-video" src="https://www.youtube.com/embed/k7VcUe-uZhc?si=VtQauVGci9-BANCx?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            </div>
+        </div>
+    </div>
+ 
+    <div class="w-full bg-gradient-to-b from-blue-100 via-blue-100 to-white">
+        <p>ㅤ</p>
+        <p>ㅤ</p>
+        <p>ㅤ</p>
+        <p>ㅤ</p>
+        <p>ㅤ</p>           
+    </div> 
+</Layout>
+

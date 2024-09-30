@@ -1,0 +1,86 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Widget from '../components/Widget.astro';
+import Topbar from '../components/Topbar.astro';
+---
+
+<Layout title="Decoración">  
+	<Topbar/>
+	<Widget/>
+    
+    <!-- Título Principal-->
+    <div class="flex flex-col w-full items-center pt-4 pb-4 gap-4 bg-cover bg-center" style="background-image: url('/wix.jpeg');">
+        <h2 class="text-4xl pt-6 md:text-6xl font-extrabold text-white max-[572px]:text-2xl">
+            Decoración de Piscinas
+        </h2>
+        <!-- Sección de Descripción -->
+        <p class="text-white text-lg md:text-2xl text-center max-w-3xl">
+            En <span class="font-bold">SunSummer</span>, ofrecemos decoraciones que <span class="font-bold">transforman tu piscina</span> en un espacio visualmente impresionante, con una amplia gama de revestimientos y cerámicas decorativas.
+        </p>
+        <!-- Botón de Llamada a la Acción -->
+        <a href="/contactanos" class="bg-white text-blue-600 hover:bg-blue-100 font-semibold py-3 px-8 rounded-md shadow-lg transition-all duration-300">
+            ¡Solicita una Cotización!
+        </a>
+    </div>  
+
+    <div class="flex flex-col w-full items-center pt-6 min-h-screen bg-blue-100">
+
+       <!-- Sección de Servicios con Imágenes -->
+       <div class="mt-12 w-full max-w-4xl pb-1 rounded-lg text-gray-800">
+            <h3 class="text-3xl font-bold text-center mb-8 text-blue-900">Nuestros Servicios</h3>
+            <div class="grid grid-cols-1 gap-12">
+                <!-- Servicio 1 -->
+                <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-4 rounded-lg shadow">
+                    <img src="/nino2.jpg" alt="Revestimientos personalizados" class="w-full md:w-1/2 rounded-lg shadow-lg object-cover">
+                    <div class="text-center md:text-left">
+                        <h4 class="text-2xl font-bold text-blue-800">Revestimientos Personalizados</h4>
+                        <p>
+                            Los revestimientos son una excelente manera de agregar estilo y funcionalidad a tu piscina. Elige entre una variedad de texturas y colores para crear un espacio que refleje tu gusto personal.
+                        </p>
+                    </div>
+                </div>
+                <!-- Servicio 2 -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-8 bg-white p-4 rounded-lg shadow">
+                    <img src="/nino2.jpg" alt="Cerámicas decorativas" class="w-full md:w-1/2 rounded-lg shadow-lg object-cover">
+                    <div class="text-center md:text-left">
+                        <h4 class="text-2xl font-bold text-blue-800">Cerámicas Decorativas</h4>
+                        <p>
+                            Nuestras cerámicas decorativas no solo mejoran la estética de tu piscina, sino que también son altamente resistentes y fáciles de mantener.
+                        </p>
+                    </div>
+                </div>
+                <!-- Servicio 3 -->
+                <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-4 rounded-lg shadow">
+                    <img src="/nino2.jpg" alt="Iluminación ambiental" class="w-full md:w-1/2 rounded-lg shadow-lg object-cover">
+                    <div class="text-center md:text-left">
+                        <h4 class="text-2xl font-bold text-blue-800">Iluminación Ambiental</h4>
+                        <p>
+                            La iluminación es clave para crear un ambiente acogedor y relajante en tu piscina. Ofrecemos opciones de luces LED sumergibles y perimetrales.
+                        </p>
+                    </div>
+                </div>
+                <!-- Servicio 4 -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-8 bg-white p-4 rounded-lg shadow">
+                    <img src="/nino2.jpg" alt="Muebles y decoración" class="w-full md:w-1/2 rounded-lg shadow-lg object-cover">
+                    <div class="text-center md:text-left">
+                        <h4 class="text-2xl font-bold text-blue-800">Muebles y Decoración</h4>
+                        <p>
+                            Complementa el entorno de tu piscina con muebles y accesorios decorativos que combinan con el diseño de tu espacio y lo hacen aún más atractivo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full bg-gradient-to-b from-blue-100 via-blue-100 to-white">
+            <p>ㅤ</p>
+            <p>ㅤ</p>
+            <p>ㅤ</p>
+            <p>ㅤ</p>
+            <p>ㅤ</p>           
+        </div>
+    </div>
+    
+      
+</Layout>
+
+

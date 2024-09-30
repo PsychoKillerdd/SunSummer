@@ -10,12 +10,12 @@ import Topbar from '../components/Topbar.astro';
     
     <!-- Título Principal-->
     <div class="flex flex-col w-full items-center pt-4 pb-4 gap-4 bg-cover bg-center" style="background-image: url('/wix.jpeg');">
-        <h2 class="text-4xl md:text-6xl font-extrabold text-white max-[572px]:text-2xl">
+        <h2 class="text-4xl pt-6 md:text-6xl font-extrabold text-white max-[572px]:text-2xl">
             Construcción de Piscinas
         </h2>
         <!-- Sección de Descripción -->
         <p class="text-white text-lg md:text-2xl text-center max-w-3xl">
-            En <span class="font-bold">SunSummer</span>, nos especializamos en la construcción de piscinas personalizadas que transforman tu hogar en un oasis veraniego. ¡Diseñamos y construimos la piscina de tus sueños con materiales de la más alta calidad!
+            En <span class="font-bold">SunSummer</span>, nos especializamos en la <span class="font-bold">construcción de piscinas personalizadas</span> que transforman tu hogar en un oasis veraniego. ¡Diseñamos y construimos la piscina de tus sueños con materiales de la más alta calidad!
         </p>
         <!-- Botón de Llamada a la Acción -->
         <a href="/contactanos" class="bg-white text-blue-600 hover:bg-blue-100 font-semibold py-3 px-8 rounded-md shadow-lg transition-all duration-300">
@@ -23,32 +23,28 @@ import Topbar from '../components/Topbar.astro';
         </a>
     </div>  
 
-    <div class="flex flex-col w-full items-center pt-12 min-h-screen bg-blue-100">
+    <div class="flex flex-col w-full items-center pt-6 min-h-screen bg-blue-100">
         <!-- Sección de Beneficios -->
-        <div class="mt-12 w-full max-w-4xl bg-blue-50 p-6 rounded-lg shadow-md text-gray-800">
+        <div class="mt-12 w-full max-w-4xl bg-blue-50 p-4 rounded-lg shadow-md text-gray-800">
             <h3 class="text-3xl font-bold text-center mb-8 text-blue-900">Beneficios de Construir con SunSummer</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="flex flex-col items-center">
                     <h4 class="text-2xl font-bold text-blue-800">Calidad Superior</h4>
-                    <p class="text-center">Trabajamos solo con materiales de alta calidad para garantizar la durabilidad y la belleza de tu piscina.</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <h4 class="text-2xl font-bold text-blue-800">Diseños Personalizados</h4>
-                    <p class="text-center">Adaptamos nuestros diseños a tus necesidades y estilo, asegurándonos de crear un espacio único.</p>
+                    <p class="text-center max-w-xs">Trabajamos solo con materiales de alta calidad para garantizar la durabilidad y la belleza de tu piscina.</p>
                 </div>
                 <div class="flex flex-col items-center">
                     <h4 class="text-2xl font-bold text-blue-800">Tecnología Avanzada</h4>
-                    <p class="text-center">Utilizamos técnicas de construcción modernas para optimizar tiempo y recursos.</p>
+                    <p class="text-center max-w-xs">Utilizamos técnicas de construcción modernas para optimizar tiempo y recursos.</p>
                 </div>
-                <div class="flex flex-col items-center">
+                <div class="flex flex-col items-center md:col-span-2">
                     <h4 class="text-2xl font-bold text-blue-800">Servicio Integral</h4>
-                    <p class="text-center">Desde el diseño hasta la decoración final, te acompañamos en cada paso para crear el mejor resultado.</p>
+                    <p class="text-center max-w-xs">Desde el diseño hasta la decoración final, te acompañamos en cada paso para crear el mejor resultado.</p>
                 </div>
             </div>
         </div>
     
         <!-- Sección de Servicios con Imágenes -->
-        <div class="mt-12 w-full max-w-4xl bg-blue-100 p-6 rounded-lg text-gray-800">
+        <div class="mt-12 w-full max-w-4xl bg-blue-100 pb-1 rounded-lg text-gray-800">
             <h3 class="text-3xl font-bold text-center mb-8 text-blue-900">Nuestros Servicios</h3>
             <div class="grid grid-cols-1 gap-12">
                 <!-- Servicio 1 -->
@@ -100,21 +96,18 @@ import Topbar from '../components/Topbar.astro';
                             Los brocales proporcionan un borde sólido y seguro alrededor de la piscina, añadiendo un toque estético y seguridad a todo el proyecto.
                         </p>
                     </div>
-                </div>
-                <!-- Servicio 6 -->
-                <div class="flex flex-col md:flex-row-reverse items-center gap-8 mb-8 bg-white p-4 rounded-lg shadow">
-                    <img src="/PS/P1.jpg" alt="Decorar y acondicionar la piscina" class="w-full md:w-1/2 rounded-lg shadow-lg object-cover">
-                    <div class="text-center md:text-left">
-                        <h4 class="text-2xl font-bold text-blue-800">Decorar y Acondicionar</h4>
-                        <p>
-                            La decoración y el acondicionamiento de tu piscina añaden el toque final, creando un espacio acogedor y elegante para disfrutar durante todo el año.
-                        </p>
-                    </div>
-                </div>
+                </div>       
             </div>
         </div>
+        
     </div>
-    
+    <div class="w-full bg-gradient-to-b from-blue-100 via-blue-100 to-white">
+        <p>ㅤ</p>
+        <p>ㅤ</p>
+        <p>ㅤ</p>
+        <p>ㅤ</p>
+        <p>ㅤ</p>           
+    </div>
 </Layout>
 
 
