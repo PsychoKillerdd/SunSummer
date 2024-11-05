@@ -6,7 +6,7 @@ import Widget from "../components/Widget.astro";
 import { ViewTransitions } from "astro:transitions";
 ---
 <!doctype html>
-<html lang="es">
+<html lang="es" class="elemento">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -24,5 +24,10 @@ import { ViewTransitions } from "astro:transitions";
     <Footer />
   </body>
 </html>
+<style>
+  .elemento::-webkit-scrollbar { /* Chrome, Safari y Edge */
+  display: none;
+}
 
+</style>
 
