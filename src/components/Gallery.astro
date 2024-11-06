@@ -1,39 +1,35 @@
-
-<div class="flex justify-center  ">
-<div class="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
-    
-    <div>
-        <img class="h-auto max-w-full rounded-lg cursor-pointer" src="FTS/PS7.webp" alt="GIF Example" onclick="openModal(this)">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg cursor-pointer" src="FTS/PS1.webp" alt="Image 1" onclick="openModal(this)">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg cursor-pointer" src="FTS/PS2.webp" alt="Image 12" onclick="openModal(this)">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg cursor-pointer" src="FTS/PS2.webp" alt="Image 12" onclick="openModal(this)">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg cursor-pointer" src="FTS/PS2.webp" alt="Image 12" onclick="openModal(this)">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg cursor-pointer" src="FTS/PS2.webp" alt="Image 12" onclick="openModal(this)">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg cursor-pointer" src="FTS/PS2.webp" alt="Image 12" onclick="openModal(this)">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg cursor-pointer" src="FTS/PS2.webp" alt="Image 12" onclick="openModal(this)">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg cursor-pointer" src="wix.jpeg" alt="Image 12" onclick="openModal(this)">
+<div class="flex justify-center">
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
+        <div>
+            <img class="h-auto max-w-full rounded-lg cursor-pointer" src="FTS/PS7.webp" alt="GIF Example" onclick="openModal(this)">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg cursor-pointer" src="FTS/PS1.webp" alt="Image 1" onclick="openModal(this)">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg cursor-pointer" src="FTS/PS2.webp" alt="Image 12" onclick="openModal(this)">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg cursor-pointer" src="FTS/PS2.webp" alt="Image 12" onclick="openModal(this)">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg cursor-pointer" src="FTS/PS2.webp" alt="Image 12" onclick="openModal(this)">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg cursor-pointer" src="FTS/PS2.webp" alt="Image 12" onclick="openModal(this)">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg cursor-pointer" src="FTS/PS2.webp" alt="Image 12" onclick="openModal(this)">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg cursor-pointer" src="FTS/PS2.webp" alt="Image 12" onclick="openModal(this)">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg cursor-pointer" src="wix.jpeg" alt="Image 12" onclick="openModal(this)">
+        </div>
     </div>
 </div>
-    
-</div>
 
-<!-- Modal -->
 <div id="modal" class="modal z-50">
     <span class="absolute top-0 right-0 p-4 text-white cursor-pointer" onclick="closeModal()">✕</span>
     <img id="modal-image" src="" alt="Modal Image">
@@ -45,6 +41,12 @@
         const modalImage = document.getElementById('modal-image');
         modalImage.src = image.src;
         modal.style.display = 'flex';
+        
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
     }
 
     function closeModal() {
@@ -54,7 +56,6 @@
 </script>
 
 <style>
-    /* Agrega un poco de estilo adicional para el modal */
     .modal {
         display: none;
         position: fixed;
@@ -66,8 +67,23 @@
         justify-content: center;
         align-items: center;
     }
+
     .modal img {
         max-width: 90%;
         max-height: 80%;
+    }
+
+    .modal span {
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    .modal span:hover {
+        color: #ccc;
     }
 </style>
